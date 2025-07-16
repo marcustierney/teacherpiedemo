@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teacher Pie Demo</title>
+  <style>
+    /* ===== Layout ===== */
+    body {
+      display: flex;              /* center the demo */
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f4f4f4;
+      margin: 0;
+      font-family: system-ui, sans-serif;
+    }
+
+    .pie-container {
+      width: 400px;               /* adjust size freely */
+      height: 400px;
+    }
+
+    /* ===== Slice behaviour ===== */
+    .slice {
+      cursor: pointer;
+      transition: transform .3s ease;
+      transform-origin: 50% 50%;
+    }
+    .slice:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<div class="pie-container">
+  <svg viewBox="0 0 100 100">
+
+    <!-- Slice #1 (upper‑right) -->
+    <a href="pages/t1.html">
+      <path class="slice"
+            d="M50,50 L50,0 A50,50 0 0,1 93.3,25 Z"
+            fill="url(#img1)"></path>
+    </a>
+
+    <!-- Slice #2 (lower‑right) -->
+    <a href="pages/t2.html">
+      <path class="slice"
+            d="M50,50 L93.3,25 A50,50 0 0,1 93.3,75 Z"
+            fill="url(#img2)"></path>
+    </a>
+
+    <!-- Slice #3 (lower‑left) -->
+    <a href="pages/t3.html">
+      <path class="slice"
+            d="M50,50 L93.3,75 A50,50 0 0,1 50,100 Z"
+            fill="url(#img3)"></path>
+    </a>
+
+    <!-- Slice #4 (upper‑left) -->
+    <a href="pages/t4.html">
+      <path class="slice"
+            d="M50,50 L50,100 A50,50 0 0,1 6.7,75 Z"
+            fill="url(#img4)"></path>
+    </a>
+
+    <!-- === Image patterns === -->
+    <defs>
+      <pattern id="img1" patternUnits="userSpaceOnUse" width="100" height="100">
+        <image href="images/t1.jpg" width="100" height="100" />
+      </pattern>
+      <pattern id="img2" patternUnits="userSpaceOnUse" width="100" height="100">
+        <image href="images/t2.jpg" width="100" height="100" />
+      </pattern>
+      <pattern id="img3" patternUnits="userSpaceOnUse" width="100" height="100">
+        <image href="images/t3.jpg" width="100" height="100" />
+      </pattern>
+      <pattern id="img4" patternUnits="userSpaceOnUse" width="100" height="100">
+        <image href="images/t4.jpg" width="100" height="100" />
+      </pattern>
+    </defs>
+  </svg>
+</div>
+
+</body>
+</html>
